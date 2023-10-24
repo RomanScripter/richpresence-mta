@@ -6,7 +6,7 @@
 --]]
 
 local application = {
-    id = "1166352538489065553",
+    id = "", -- Application ID
 
     server = {
         name = "Roman Store Inc.",
