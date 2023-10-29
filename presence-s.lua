@@ -30,8 +30,8 @@ local application = {
 
 addEventHandler("onPlayerResourceStart", root,
     function(theResource)
-        if (theResource == getThisResource()) then
-            triggerClientEvent(source, "addPlayerRichPresence", resourceRoot, application);
+        if (theResource == resource) then
+            triggerClientEvent(source, "addPlayerRichPresence", source, application);
         end
     end
 );
