@@ -7,13 +7,11 @@
 
 local application = {
     id = "", -- Application ID
-
-    server = {
-        name = "Roman Store Inc.",
-        logo = "https://i.imgur.com/wkRCwhI.png",
-        max_slots = tonumber(getServerConfigSetting("maxplayers")),
-        description = "Melhor loja de resources do MTA:SA."
-    },
+    state = "Jogadores Online",
+    max_slots = tonumber(getServerConfigSetting("maxplayers")),
+    logo = "https://i.imgur.com/wkRCwhI.png",
+    logo_name = "Roman Store Inc.",
+    details = "Melhor loja de resources do MTA:SA."
 
     buttons = {
         [1] = {
@@ -32,8 +30,8 @@ local application = {
 
 addEventHandler("onPlayerResourceStart", root,
     function(theResource)
-        if (theResource == getThisResource()) then
-            triggerClientEvent(source, "addPlayerRichPresence", resourceRoot, application);
+        if (theResource == resource) then
+            triggerClientEvent(source, "addPlayerRichPresence", source, application);
         end
     end
 );
