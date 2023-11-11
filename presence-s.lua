@@ -11,7 +11,7 @@ local application = {
     max_slots = tonumber(getServerConfigSetting("maxplayers")),
     logo = "https://i.imgur.com/wkRCwhI.png",
     logo_name = "Roman Store Inc.",
-    details = "Melhor loja de resources do MTA:SA."
+    details = "Melhor loja de resources do MTA:SA.",
 
     buttons = {
         [1] = {
